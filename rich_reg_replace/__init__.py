@@ -24,7 +24,7 @@ By default, only files with the following extensions are searched:
 
 	.php .css .js .ui .py .toml .conf
 """
-__version__ = "0.0.0"
+__version__ = "1.0.0"
 
 import sys, logging, argparse, re
 from time import sleep
