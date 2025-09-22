@@ -24,6 +24,7 @@ By default, only files with the following extensions are searched:
 
 	.php .css .js .ui .py .toml .conf
 """
+
 __version__ = "1.0.0"
 
 import sys, logging, argparse, re
@@ -202,7 +203,8 @@ class Replacer:
 				self.show_message(str(e), ERROR)
 			else:
 				self.change_count += 1
-				self.show_message('CHANGED')
+				if self.prompt_all:
+					self.show_message('CHANGED')
 		else:
 			self.show_message('unchanged')
 		return False	# Signals not to exit
